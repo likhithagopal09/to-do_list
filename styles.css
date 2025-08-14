@@ -1,0 +1,88 @@
+:root {
+  --bg: #0b1020;
+  --panel: #17223e;
+  --muted: #8aa0b9;
+  --text: #f5f7fb;
+  --accent: #6aa6ff;
+  --danger: #ff6b6b;
+  --ok: #5dd39e;
+  --shadow: 0 10px 25px rgba(24, 23, 23, 0.35);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 900px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.app__header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.title {
+  margin: 0 0 14px;
+}
+
+.input {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.item.completed .item__text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--danger);
+  font-size: 18px;
+}
